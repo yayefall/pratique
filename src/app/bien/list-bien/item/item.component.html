@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="card" style="width: 18rem;" >
+    <img
+      class="card-img-top"
+      src="{{Mybien.image}}"
+      alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{Mybien.title | uppercase }}</h5>
+      <p class="card-text">{{Mybien.description | summarize:50}}</p>
+      <span class="float-left btn btn-sm btn-outline-danger">{{Mybien.price | separator: '.'}} fcfa</span>
+      <span btn btn-sm text-center=" disabled ">Il y'a {{Mybien.creatAt | timeleft }}</span>
+      <a href="#" class="btn btn-primary float-right"> Reserver</a>
+    </div>
+  </div>
+
+</div>

@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pratique';
+  nom = 'Yaye Fall Dev';
+  ok = false;
+  textbtn = 'Activer' ;
+
+  // tslint:disable-next-line:typedef
+  onclick() {
+    this.ok = !this.ok;
+    this.textbtn = this.ok ? 'Activer' : 'desactiver' ;
+  }
 }
