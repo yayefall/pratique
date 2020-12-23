@@ -78,12 +78,11 @@ export class BienService {
     return this.biens;
   }
   // tslint:disable-next-line:typedef
-  getBienByid(id: number){
-    const bienFound = this.biens.find(
-       (Mybien: Bien) => {
-      return Mybien.id === id;
-    });
-    return bienFound;
+  getBienByid(id: number): any{
+    return this.biens.find(
+      (Mybien: Bien) => {
+        return Mybien.id === id;
+      });
   }
   // tslint:disable-next-line:typedef
   addBien(newBien: Bien){
@@ -101,5 +100,8 @@ export class BienService {
   getLastid(): number{
     return this.biens[this.biens.length - 1] ?
       this.biens[this.biens.length - 1].id : 0;
+  }
+  getSimilaire(){
+
   }
 }

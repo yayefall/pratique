@@ -16,6 +16,12 @@ import { SeparatorPipe } from './pipes/separator.pipe';
 import { TimeleftPipe } from './pipes/timeleft.pipe';
 import { SummarizePipe } from './pipes/summarize.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import {RouterModule} from '@angular/router';
+import { ReservationsBienComponent } from './bien/reservations-bien/reservations-bien.component';
+import { EditReservationComponent } from './bien/reservations-bien/edit-reservation/edit-reservation.component';
+import { DetailReservationComponent } from './bien/reservations-bien/detail-reservation/detail-reservation.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -31,12 +37,17 @@ import { FilterPipe } from './pipes/filter.pipe';
     SeparatorPipe,
     TimeleftPipe,
     SummarizePipe,
-    FilterPipe
+    FilterPipe,
+    ReservationsBienComponent,
+    EditReservationComponent,
+    DetailReservationComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

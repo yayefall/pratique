@@ -9,7 +9,7 @@
       <p class="card-text">{{Mybien.description | summarize:50}}</p>
       <span class="float-left btn btn-sm btn-outline-danger">{{Mybien.price | separator: '.'}} fcfa</span>
       <span btn btn-sm text-center=" disabled ">Il y'a {{Mybien.creatAt | timeleft }}</span>
-      <a href="#" class="btn btn-primary float-right"> Reserver</a>
+      <a [routerLink]="['/bien',Mybien.id]" class="btn btn-primary float-right"> Reserver</a>
     </div>
   </div>
 

@@ -1,0 +1,43 @@
+<div>
+<p>Mes reservations</p>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Date</th>
+    <th scope="col">Bien</th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <td>Jacob</td>
+    <td>Thornton</td>
+    <td>
+      <a [routerLink]="['/reservations',1]" class="btn btn-sm btn-outline-info ms-2" >Detail</a>
+      <a [routerLink]="['/reservations',1,'edit']"  class="btn btn-sm btn-outline-warning">Edit</a>
+    </td>
+  </tr>
+  <tr>
+    <td>the Bird</td>
+    <td>@twitter</td>
+    <td>
+      <a [routerLink]="['/reservations',1]" class="btn btn-sm btn-outline-info ms-2" >Detail</a>
+      <a [routerLink]="['/reservations',1,'edit']"  class="btn btn-sm btn-outline-warning">Edit</a>
+    </td>
+  </tr>
+  <tr>
+    <td>the Bird</td>
+    <td>@twitter</td>
+    <td>
+      <a [routerLink]="['/reservations',2]" class="btn btn-sm btn-outline-info ms-2" >Detail</a>
+      <a [routerLink]="['/reservations',2,'edit']"  class="btn btn-sm btn-outline-warning">Edit</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<div class="row">
+  <router-outlet></router-outlet>
+</div>
