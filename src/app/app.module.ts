@@ -22,6 +22,8 @@ import { EditReservationComponent } from './bien/reservations-bien/edit-reservat
 import { DetailReservationComponent } from './bien/reservations-bien/detail-reservation/detail-reservation.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ErrorsComponent } from './errors/errors.component';
+import { ConexionComponent } from './conexion/conexion.component';
+import { RegisterComponent } from './conexion/register/register.component';
 
 
 // @ts-ignore
@@ -46,7 +48,9 @@ import { ErrorsComponent } from './errors/errors.component';
     EditReservationComponent,
     DetailReservationComponent,
     PageNotFoundComponent,
-    ErrorsComponent
+    ErrorsComponent,
+    ConexionComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

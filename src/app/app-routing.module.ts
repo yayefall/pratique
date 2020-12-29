@@ -9,12 +9,15 @@ import {EditReservationComponent} from './bien/reservations-bien/edit-reservatio
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {AuthGuardService} from './auth-guard.service';
 import {ErrorsComponent} from './errors/errors.component';
+import {BienResolverService} from './bien-resolver.service';
+import {ConexionComponent} from './conexion/conexion.component';
 
 const appRoute: Routes = [
   {path: '', redirectTo: '/bien', pathMatch: 'full' },
   {path: 'bien', component: ListBienComponent },
   {path: 'bien/add', component: AddBienComponent },
-  {path: 'bien/:id', component: DetailBienComponent },
+  {path: 'bien/:id', component: DetailBienComponent , resolve: {bien: BienResolverService}},
+  {path: 'login', component: ConexionComponent},
   {
     path: 'reservations',
     canActivateChild: [AuthGuardService],
