@@ -11,6 +11,8 @@ export class TimeleftPipe implements PipeTransform {
     const diff = currentTime.getTime() - value.getTime();
     const y = Math.floor(diff / 1000 / 60 / 60 / 24 / 365);
     if (y > 0) {return y + 'a'; }
+    const c = Math.floor((diff / 1000 / 60 / 60 / 24 / 365) / 12);
+    if (c > 0){  return c + 'm'; }
     const d = Math.floor(diff / 1000 / 60 / 60 / 24);
     if (d > 0){  return d + 'j'; }
     const h = Math.floor((diff / 1000 / 60 / 60) % 24);

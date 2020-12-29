@@ -7,6 +7,8 @@ import {ReservationsBienComponent} from './bien/reservations-bien/reservations-b
 import {DetailReservationComponent} from './bien/reservations-bien/detail-reservation/detail-reservation.component';
 import {EditReservationComponent} from './bien/reservations-bien/edit-reservation/edit-reservation.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {AuthGuardService} from './auth-guard.service';
+import {ErrorsComponent} from './errors/errors.component';
 
 const appRoute: Routes = [
   {path: '', redirectTo: '/bien', pathMatch: 'full' },
@@ -15,14 +17,18 @@ const appRoute: Routes = [
   {path: 'bien/:id', component: DetailBienComponent },
   {
     path: 'reservations',
+    canActivateChild: [AuthGuardService],
    component: ReservationsBienComponent,
     children: [
            {path: ':id', component: DetailReservationComponent},
            {path: ':id/edit', component: EditReservationComponent},
        ]
    },
-  {path: 'not-found', component: PageNotFoundComponent },
-  {path: '**', redirectTo: '/not-found' },
+  // can Activete guard
+
+  // {path: 'not-found', component: PageNotFoundComponent},
+  {path: 'not-found', component: ErrorsComponent, data: {message: 'page introuvable!'}},
+  {path: '**', redirectTo: '/not-found'},
 ];
 
 @NgModule({

@@ -9,7 +9,7 @@ export class BienService {
     {
       id: 1 ,
       title: 'maison',
-      description: 'soupe candian mafe',
+      description: 'soupe candian salate',
       price: 123000 ,
       image: 'https://source.unsplash.com/1080x720/?class',
       categorie: 'abcnvnb',
@@ -31,7 +31,7 @@ export class BienService {
     {
       id: 3,
       title: 'belle dame',
-      description: 'soupe candian mafe',
+      description: 'soupe candian sauce',
       price: 400000 ,
       state: 1,
       image: 'https://source.unsplash.com/1080x720/?girl',
@@ -101,6 +101,7 @@ export class BienService {
     return this.biens[this.biens.length - 1] ?
       this.biens[this.biens.length - 1].id : 0;
   }
+  // tslint:disable-next-line:typedef
   getSimilaire(){
 
   }

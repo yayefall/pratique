@@ -10,15 +10,14 @@
         <img
           class="card-img-top"
           src= "{{bien.image}}"
-          alt="Annonce 1"
-        />
+          alt="Annonce 1" />
         <div class="card-body">
-          <h5 class="card-title">{{bien.title}}</h5>
+          <h5 class="card-title">{{bien.title | uppercase}}</h5>
           <p class="card-text">
-           {{bien.description}}
+           {{bien.description }}
           </p>
           <hr />
-          <span class="float-left btn btn-sm btn-outline-danger disabled">{{bien.price}}FCFA</span>
+          <span class="float-left btn btn-sm btn-outline-danger disabled">{{bien.price | separator: '.'}}FCFA</span>
           <span class="float-left btn btn-sm disabled">Ref: 67dh6dgo</span>
           <span class="float-left btn btn-sm disabled">Depuis: {{bien.creatAt | timeleft}}</span>
           <a href="#" class="btn btn-sm btn-primary float-right">Réserver</a

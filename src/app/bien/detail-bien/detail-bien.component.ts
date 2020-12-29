@@ -3,6 +3,7 @@ import {Bien} from '../bien.modele';
 import {BienService} from '../services/bien.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
+// tslint:disable-next-line:class-name
 class params {
 }
 

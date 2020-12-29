@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { BienComponent } from './bien/bien.component';
@@ -21,8 +21,12 @@ import { ReservationsBienComponent } from './bien/reservations-bien/reservations
 import { EditReservationComponent } from './bien/reservations-bien/edit-reservation/edit-reservation.component';
 import { DetailReservationComponent } from './bien/reservations-bien/detail-reservation/detail-reservation.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ErrorsComponent } from './errors/errors.component';
 
 
+// @ts-ignore
+// @ts-ignore
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +45,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ReservationsBienComponent,
     EditReservationComponent,
     DetailReservationComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ErrorsComponent
   ],
   imports: [
     BrowserModule,
